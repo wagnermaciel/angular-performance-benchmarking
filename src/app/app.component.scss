@@ -1,0 +1,23 @@
+.data-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 100px 0;
+}
+mat-card {
+  width: 300px;
+  flex-grow: 0;
+}
+mat-card-title {
+  padding-bottom: 16px;
+}
+.table-and-paginator-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table-container {
+  max-height: 300px;
+  overflow: auto;
+}

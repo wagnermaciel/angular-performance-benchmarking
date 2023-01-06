@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+$typography-config: mat.define-typography-config();
+$theme-config: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+      warn: mat.define-palette(mat.$red-palette),
+    ),
+    typography: $typography-config,
+    density: 0,
+  )
+);
+
+@include mat.core();
+@include mat.typography-hierarchy($theme-config);
+@include mat.button-theme($theme-config);
+@include mat.card-theme($theme-config);
+@include mat.divider-theme($theme-config);
+@include mat.form-field-theme($theme-config);
+@include mat.input-theme($theme-config);
+@include mat.paginator-theme($theme-config);
+@include mat.progress-bar-theme($theme-config);
+@include mat.select-theme($theme-config);
+@include mat.table-theme($theme-config);
+@include mat.tooltip-theme($theme-config);
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
